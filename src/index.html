@@ -20,6 +20,12 @@
         document.querySelector('#name').textContent = text;
     }());
     </script>
+    <script>
+        (async function() {
+            const { text } = await( await fetch(`/api/BI`)).json();
+            document.querySelector('#name').textContent = text;
+        }());
+        </script>
 </body>
 
 </html>
